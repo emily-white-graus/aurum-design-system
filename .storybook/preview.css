@@ -1,17 +1,14 @@
-/* Import Avenir font - keep this for font loading */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-/* Optional: Additional fine-tuning that can't be handled by theming API */
-.sbdocs-h1,
-.sbdocs-h2,
-.sbdocs-h3,
-.sbdocs-h4,
-.sbdocs-h5,
-.sbdocs-h6 {
-  font-weight: bold !important;
+/* Custom styles for MDX documentation */
+.sbdocs-wrapper h1,
+.sbdocs-wrapper h2,
+.sbdocs-wrapper h3,
+.sbdocs-wrapper h4,
+.sbdocs-wrapper h5,
+.sbdocs-wrapper h6 {
+  color: #FF6600 !important;
 }
 
 /* Ensure consistent font rendering */
 * {
-  font-family: 'Avenir', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
 }
