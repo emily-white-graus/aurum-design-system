@@ -1,6 +1,5 @@
 /* Custom styles for MDX documentation */
 .sbdocs-wrapper h1,
-.sbdocs-wrapper h2,
 .sbdocs-wrapper h3,
 .sbdocs-wrapper h4,
 .sbdocs-wrapper h5,
@@ -8,6 +7,10 @@
   color: #FF6600 !important;
   font-weight: 850 !important;
   
+}
+
+.sbdocs-wrapper h2 {
+  color: #000000 !important;
 }
 
 /* Ensure consistent font rendering */
