@@ -1,0 +1,52 @@
+# .github/workflows/transform-tokens.yml
+name: Transform tokens sent from figma
+
+on:
+  repository_dispatch:
+    types: [update-tokens]
+
+jobs:
+  build:
+    name: Transform Figma design tokens for immediate consumption
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+        directory: [assets]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create "tokens" directory
+        run: mkdir -p ${{ matrix.directory }}
+
+      - name: Create JSON from request body
+        id: create-json
+        uses: jsdaniell/create-json@v1.2.3
+        with:
+          name: ${{ github.event.client_payload.filename }}
+          json: ${{ github.event.client_payload.tokens }}
+          dir: ${{ matrix.directory }}
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Transform design tokens 
+        run: npm run generate:css
+
+      - name: Create PR 
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: ${{ github.event.client_payload.commitMessage || 'Tokens updated' }}
+          title: "Design tokens updated"
+          body: "Design tokens have been updated via Figma and need to be reviewed."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: 'main'
