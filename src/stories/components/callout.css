@@ -1,0 +1,71 @@
+/* Callout.css */
+
+.callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  max-width: 100%;
+}
+
+.callout-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.callout-content {
+  flex: 1;
+  margin: 0;
+}
+
+/* Default variant */
+.callout-default {
+  background-color: #dbeafe;
+  border-color: #93c5fd;
+  color: #000000;
+}
+
+.callout-default .callout-icon {
+  color: #000000;
+}
+
+/* Success variant */
+.callout-success {
+  background-color: #dcfce7;
+  border-color: #86efac;
+  color: #000000;
+}
+
+.callout-success .callout-icon {
+  color: #000000;
+}
+
+/* Warning variant */
+.callout-warning {
+  background-color: #fef3c7;
+  border-color: #fcd34d;
+  color: #000000;
+}
+
+.callout-warning .callout-icon {
+  color: #000000;
+}
+
+/* Danger variant */
+.callout-danger {
+  background-color: #fecaca;
+  border-color: #fca5a5;
+  color: #000000;
+}
+
+.callout-danger .callout-icon {
+  color: #000000;
+}
