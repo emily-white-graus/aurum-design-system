@@ -1,0 +1,76 @@
+/* Text.css */
+
+.text {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Size Styles */
+.text-xs {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+.text-sm {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.text-base {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.text-lg {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+}
+
+.text-xl {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.1px;
+}
+
+/* Weight Styles */
+.text-normal {
+  font-weight: 400;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+/* Color Styles */
+.text-primary {
+  color: #111827;
+}
+
+.text-secondary {
+  color: #6B7280;
+}
+
+.text-muted {
+  color: #9CA3AF;
+}
+
+.text-error {
+  color: #DC2626;
+}
+
+.text-success {
+  color: #059669;
+}
