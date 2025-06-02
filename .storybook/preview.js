@@ -1,5 +1,6 @@
 import { aurumTheme } from './theme.js';
 import './preview.css';
+import '../src/styles/tokens.css';
 
 const preview = {
   parameters: {
