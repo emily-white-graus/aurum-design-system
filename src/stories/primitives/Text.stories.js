@@ -83,12 +83,6 @@ export const H4 = {
   },
 };
 
-export const H5 = {
-  args: {
-    as: 'h5',
-    children: 'This is H5 text',
-  },
-};
 
 export const Subtitle = {
   args: {

@@ -1,24 +1,29 @@
+// Heading.jsx
 import React from 'react';
-import './heading.css';
+import { Text } from '../primitives/Text'; 
 
 /**
- * Heading component displays text with different heading levels and font weights.
+ * Heading component renders semantic heading levels using the Text primitive.
+ * Automatically applies the correct size and weight based on the level.
+ *
  * @param {string} level - The heading level: 'h1', 'h2', 'h3', or 'h4'
- * @param {string} weight - The font weight: 'medium' or 'bold'
- * @param {string} children - The text content to display
+ * @param {React.ReactNode} children - The text content to display
  * @param {string} className - Additional CSS classes
- * @param {object} ...props - Additional props to pass to the heading element
+ * @param {object} ...rest - Additional props to pass to the Text component
  */
-
-export const Heading = (props) => {
-  const { level = 'h1', weight = 'medium', children, className = '', ...rest } = props;
-
-  const HeadingTag = level;
-  const headingClass = `heading heading-${level} heading-${weight} ${className}`;
-
+export const Heading = ({
+  level = 'h1',
+  children,
+  className = '',
+  ...rest
+}) => {
   return (
-    <HeadingTag className={headingClass} {...rest}>
+    <Text
+      as={level}
+      className={`heading ${className}`}
+      {...rest}
+    >
       {children}
-    </HeadingTag>
+    </Text>
   );
 };

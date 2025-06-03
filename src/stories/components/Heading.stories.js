@@ -16,10 +16,6 @@ export default {
       control: { type: 'select' },
       options: ['h1', 'h2', 'h3', 'h4'],
     },
-    weight: {
-      control: { type: 'select' },
-      options: ['medium', 'bold'],
-    },
     children: {
       control: 'text',
     },
@@ -27,72 +23,37 @@ export default {
   // Default args
   args: {
     level: 'h1',
-    weight: 'medium',
     children: 'Example',
   },
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const H1Medium = {
+export const H1 = {
   args: {
     level: 'h1',
-    weight: 'medium',
     children: 'Example',
   },
 };
 
-export const H1Bold = {
-  args: {
-    level: 'h1',
-    weight: 'bold',
-    children: 'Example',
-  },
-};
-
-export const H2Medium = {
+export const H2 = {
   args: {
     level: 'h2',
-    weight: 'medium',
     children: 'Example',
   },
 };
 
-export const H2Bold = {
-  args: {
-    level: 'h2',
-    weight: 'bold',
-    children: 'Example',
-  },
-};
 
-export const H3Medium = {
+export const H3 = {
   args: {
     level: 'h3',
-    weight: 'medium',
     children: 'Example',
   },
 };
 
-export const H3Bold = {
-  args: {
-    level: 'h3',
-    weight: 'bold',
-    children: 'Example',
-  },
-};
 
-export const H4Medium = {
+export const H4 = {
   args: {
     level: 'h4',
-    weight: 'medium',
-    children: 'Example',
-  },
-};
-
-export const H4Bold = {
-  args: {
-    level: 'h4',
-    weight: 'bold',
     children: 'Example',
   },
 };
