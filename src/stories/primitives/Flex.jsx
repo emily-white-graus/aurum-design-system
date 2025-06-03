@@ -1,29 +1,30 @@
-import * as React from 'react';
-import { Slot } from '@radix-ui/react-slot';
-import { Box } from './Box';
+import * as React from 'react'
+import { Box } from './Box'
 
 export const Flex = React.forwardRef(
   (
     {
-      asChild = false,
-      direction = 'row',
-      alignItems = 'flex-start',
-      justifyContent = 'flex-start',
-      wrap = false,
-      gapX,
-      gapY,
-      style,
       children,
+      direction = 'row',
+      justifyContent = 'flex-start',
+      alignItems = 'stretch',
+      gapX = 0,
+      gapY = 0,
+      wrap = false,
+      style = {},
       ...props
     },
     ref
   ) => {
-    const Comp = asChild ? Slot : 'div';
-
     return (
       <Box
-        asChild
         ref={ref}
+        asChild={false}
+        width="auto"
+        height="auto"
+        backgroundImage="none"
+        border="none"
+        borderRadius="0"
         style={{
           display: 'flex',
           flexDirection: direction,
@@ -36,10 +37,10 @@ export const Flex = React.forwardRef(
         }}
         {...props}
       >
-        <Comp>{children}</Comp>
+        {children}
       </Box>
-    );
+    )
   }
-);
+)
 
-Flex.displayName = 'Flex';
+Flex.displayName = 'Flex'
