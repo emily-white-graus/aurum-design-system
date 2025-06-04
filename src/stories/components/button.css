@@ -1,0 +1,83 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  font-family: inherit;
+  padding: 0 1rem;
+  border: none;
+  background: transparent;
+}
+
+/* Sizes */
+.button--small {
+  height: 32px;
+}
+.button--medium {
+  height: 40px;
+}
+.button--large {
+  height: 48px;
+}
+
+/* Variants */
+.button--primary {
+  background-color: #006c78;
+  color: white !important;
+}
+.button--primary:hover {
+  background: #005961;
+}
+.button--primary.button--disabled {
+  background: #dde1d9;
+  color: #7a7a7a;
+}
+
+/* Secondary */
+.button--secondary {
+  background: transparent;
+  border: 2px solid #006c78;
+  color: #006c78;
+}
+.button--secondary:hover {
+  background: #006c78;
+  color: white;
+}
+.button--secondary.button--disabled {
+  border-color: #dde1d9;
+  color: #7a7a7a;
+}
+
+/* Tertiary */
+.button--tertiary {
+  background: #dde1d9;
+  color: black;
+}
+.button--tertiary:hover {
+  background: #c7ccc4;
+}
+.button--tertiary.button--disabled {
+  background: #dde1d9;
+  color: #7a7a7a;
+}
+
+/* Destructive */
+.button--destructive {
+  background: #e62311;
+  color: white;
+}
+.button--destructive:hover {
+  background: #c41707;
+}
+.button--destructive.button--disabled {
+  background: #f47858;
+  color: white;
+}
+
+.button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

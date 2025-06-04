@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: var(--font-common-font-family, Arial);
-  color: var(--primitives-color-navy-200) !important;
+  /* color: var(--primitives-color-navy-200) !important; */
 }
 
 /* Semantic base styles */
@@ -40,5 +40,9 @@
   font-size: var(--font-body-body-1-regular-font-size);
   font-weight: var(--font-body-body-1-regular-font-weight);
   line-height: var(--font-body-body-1-regular-line-height);
+}
+
+.text-subtitle {
+  font-size: var(--font-body-body-3-regular-font-size);
 }
 
