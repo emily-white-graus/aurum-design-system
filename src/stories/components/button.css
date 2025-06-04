@@ -2,10 +2,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 9999px;
+  border-radius: var(--primitives-radius-rounded-full); /* 9999px */
   gap: 0.5rem;
   transition: all 0.2s ease-in-out;
-  font-family: inherit;
+  font-family: var(--primitives-typography-font-family-primary, inherit);
   padding: 0 1rem;
   border: none;
   background: transparent;
@@ -14,62 +14,67 @@
 /* Sizes */
 .button--small {
   height: 32px;
+  padding: 0 1rem; /* tighter side padding */
 }
+
 .button--medium {
   height: 40px;
+  padding: 0 1.5rem; /* base padding */
 }
+
 .button--large {
   height: 48px;
+  padding: 0 2.5rem; /* more spacious padding */
 }
 
 /* Variants */
 .button--primary {
-  background-color: #006c78;
+  background-color: var(--primitives-color-teal-100); /* #006c78 */
   color: white !important;
 }
 .button--primary:hover {
   background: #005961;
 }
 .button--primary.button--disabled {
-  background: #dde1d9;
+  background: var(--primitives-color-grey-50); /* #dde1d9 */
   color: #7a7a7a;
 }
 
 /* Secondary */
 .button--secondary {
   background: transparent;
-  border: 2px solid #006c78;
-  color: #006c78;
+  border: 2px solid var(--primitives-color-teal-100); /* #006c78 */
+  color: var(--primitives-color-teal-100);
 }
 .button--secondary:hover {
-  background: #006c78;
+  background: var(--primitives-color-teal-100);
   color: white;
 }
 .button--secondary.button--disabled {
-  border-color: #dde1d9;
+  border-color: var(--primitives-color-grey-50);
   color: #7a7a7a;
 }
 
 /* Tertiary */
 .button--tertiary {
-  background: #dde1d9;
+  background: var(--primitives-color-grey-50); /* #dde1d9 */
   color: black;
 }
 .button--tertiary:hover {
   background: #c7ccc4;
 }
 .button--tertiary.button--disabled {
-  background: #dde1d9;
+  background: var(--primitives-color-grey-50);
   color: #7a7a7a;
 }
 
 /* Destructive */
 .button--destructive {
-  background: #e62311;
+  background: var(--primitives-color-destructive-red-100); /* #e62311 */
   color: white;
 }
 .button--destructive:hover {
-  background: #c41707;
+  background: var(--primitives-color-destructive-red-200); /* #c41707 */
 }
 .button--destructive.button--disabled {
   background: #f47858;

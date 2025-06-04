@@ -135,7 +135,7 @@
   --primitives-radius-rounded-xl: 16;
   --primitives-radius-rounded-2xl: 24;
   --primitives-radius-rounded-3xl: 32;
-  --primitives-radius-rounded-full: 100;
+  --primitives-radius-rounded-full: 9999px;
   --primitives-border-stroke-none: 0;
   --primitives-border-stroke-thin: 0.5;
   --primitives-border-stroke-light: 1;

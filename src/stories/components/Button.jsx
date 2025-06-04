@@ -34,7 +34,7 @@ export const Button = React.forwardRef(
       >
         <button disabled={disabled}>
           {icon && <Box className="button__icon">{icon}</Box>}
-          <Text as="subtitle">
+          <Text style={{ color: 'inherit' }} as="subtitle">
             {children}
           </Text>
         </button>
