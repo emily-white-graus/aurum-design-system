@@ -1,13 +1,24 @@
+import React from 'react';
 import { aurumTheme } from './theme.js';
 import './preview.css';
 import '../src/styles/tokens.css';
+import { Theme } from '@radix-ui/themes';
+
+const decorators = [
+  (Story) => (
+    <Theme>
+      <Story />
+    </Theme>
+  ),
+];
 
 const preview = {
+  decorators,
   parameters: {
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
     a11y: {
