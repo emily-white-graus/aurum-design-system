@@ -1,16 +1,15 @@
-/* Custom styles for MDX documentation */
+/* MDX documentation */
 .sbdocs-wrapper h1,
 .sbdocs-wrapper h2,
 .sbdocs-wrapper h3,
 .sbdocs-wrapper h4,
 .sbdocs-wrapper h5,
 .sbdocs-wrapper h6 {
-  color: #112231 !important;
+  color: #2EAFC0 !important;
   font-weight: 850 !important;
   
 }
 
-/* Ensure consistent font rendering */
 * {
   font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
 }

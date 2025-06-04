@@ -1,7 +1,7 @@
 import { Box } from './Box';
 
 export default {
-  title: 'Components/Box',
+  title: 'Primitives/Box',
   component: Box,
   parameters: {
     layout: 'centered',

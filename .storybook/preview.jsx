@@ -1,8 +1,8 @@
 import React from 'react';
-import { aurumTheme } from './theme.js';
 import './preview.css';
 import '../src/styles/tokens.css';
 import { Theme } from '@radix-ui/themes';
+import { aurumTheme } from './theme.js';
 
 const decorators = [
   (Story) => (

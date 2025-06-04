@@ -5,21 +5,10 @@ export default {
   title: 'Primitives/Skeleton',
   component: Skeleton,
   argTypes: {
-    width: {
-      control: 'text',
-      description: 'Width of the skeleton',
-      defaultValue: '100%',
-    },
-    height: {
-      control: 'text',
-      description: 'Height of the skeleton',
-      defaultValue: '1rem',
-    },
-    radius: {
+    variant: {
       control: { type: 'select' },
-      options: ['none', 'small', 'medium', 'large', 'full'],
-      description: 'Border radius of the skeleton',
-      defaultValue: 'medium',
+      options: ['shape', 'header', 'text', 'button'],
+      description: 'Visual preset styles for common skeleton types',
     },
   },
   parameters: {
@@ -30,9 +19,21 @@ export default {
 
 const Template = (args) => <Skeleton {...args} />
 
-export const Default = Template.bind({})
-Default.args = {
-  width: '200px',
-  height: '20px',
-  radius: 'medium',
+export const Shape = Template.bind({})
+Shape.args = { variant: 'shape' }
+
+export const Header = Template.bind({})
+Header.args = { variant: 'header' }
+
+export const Text = Template.bind({})
+Text.args = { variant: 'text' }
+
+export const Button = Template.bind({})
+Button.args = { variant: 'button' }
+
+export const Custom = Template.bind({})
+Custom.args = {
+  width: '250px',
+  height: '24px',
+  radius: 'small',
 }

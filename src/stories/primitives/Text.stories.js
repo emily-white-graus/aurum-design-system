@@ -14,7 +14,7 @@ export default {
   argTypes: {
     as: {
       control: { type: 'select' },
-      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'subtitle', 'body'],
+      options: ['h1', 'h2', 'h3', 'h4', 'p', 'subtitle', 'body'],
     },
     size: {
       control: { type: 'select' },
