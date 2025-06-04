@@ -17,6 +17,8 @@ function flattenTokens(obj, prefix = []) {
   let vars = [];
   for (const key in obj) {
     const value = obj[key];
+
+    // Support custom-fontStyle (font tokens)
     if (value?.type === 'custom-fontStyle' && value.value) {
       for (const [prop, val] of Object.entries(value.value)) {
         const cssVarName = `--${[...prefix, key, prop].map(toKebabCase).join('-')}`;
@@ -26,6 +28,17 @@ function flattenTokens(obj, prefix = []) {
             : val;
         vars.push(`${cssVarName}: ${cssValue};`);
       }
+
+    // Support primitive tokens (like color, spacing, radius, etc.)
+    } else if (value?.value !== undefined) {
+      const cssVarName = `--${[...prefix, key].map(toKebabCase).join('-')}`;
+      const cssValue =
+        typeof value.value === 'number' && value.unit
+          ? `${value.value}${value.unit}`
+          : value.value;
+      vars.push(`${cssVarName}: ${cssValue};`);
+
+    // Recurse if value is an object
     } else if (typeof value === 'object') {
       vars = vars.concat(flattenTokens(value, [...prefix, key]));
     }
@@ -39,7 +52,14 @@ function generateCSS(tokens) {
 }
 
 // Run
-const tokens = JSON.parse(fs.readFileSync(inputPath, 'utf-8'));
+const rawTokens = JSON.parse(fs.readFileSync(inputPath, 'utf-8'));
+
+// Only include 'font' and 'primitives' keys
+const tokens = {
+  ...(rawTokens.font ? { font: rawTokens.font } : {}),
+  ...(rawTokens.primitives ? { primitives: rawTokens.primitives } : {}),
+};
+
 const css = generateCSS(tokens);
 
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });

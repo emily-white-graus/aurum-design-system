@@ -16,29 +16,6 @@ export default {
       control: { type: 'select' },
       options: ['h1', 'h2', 'h3', 'h4', 'p', 'subtitle', 'body'],
     },
-    size: {
-      control: { type: 'select' },
-      options: [null, 'xs', 'sm', 'md', 'lg', 'xl'],
-    },
-    weight: {
-      control: { type: 'select' },
-      options: [null, 'normal', 'bold'],
-    },
-    letterSpacing: {
-      control: { type: 'select' },
-      options: [null, 'normal', 'wide'],
-    },
-    lineHeight: {
-      control: { type: 'select' },
-      options: [null, 'tight', 'normal', 'relaxed', 'loose'],
-    },
-    color: {
-      control: { type: 'select' },
-      options: [null, 'text-primary', 'text-secondary', 'text-placeholder', 'text-link', 'text-error', 'text-button', 'text-success', 'text-on-color'],
-    },
-    children: {
-      control: 'text',
-    },
   },
   // Default args
   args: {
@@ -98,69 +75,3 @@ export const Paragraph = {
   },
 };
 
-// Override Examples
-export const BodyWithLargeSize = {
-  args: {
-    as: 'body',
-    size: 'lg',
-    children: 'Body text with large size override',
-  },
-};
-
-export const H4Bold = {
-  args: {
-    as: 'h4',
-    weight: 'bold',
-    children: 'H4 text with bold weight override',
-  },
-};
-
-export const SecondaryColor = {
-  args: {
-    as: 'body',
-    color: 'text-secondary',
-    children: 'Text with secondary color',
-  },
-};
-
-export const ErrorText = {
-  args: {
-    as: 'body',
-    color: 'text-error',
-    weight: 'bold',
-    children: 'Error message text',
-  },
-};
-
-export const SuccessText = {
-  args: {
-    as: 'body',
-    color: 'text-success',
-    weight: 'bold',
-    children: 'Success message text',
-  },
-};
-
-export const LinkText = {
-  args: {
-    as: 'body',
-    color: 'text-link',
-    children: 'This looks like a link',
-  },
-};
-
-export const CustomSpacing = {
-  args: {
-    as: 'subtitle',
-    letterSpacing: 'wide',
-    children: 'Text with wide letter spacing',
-  },
-};
-
-export const CustomLineHeight = {
-  args: {
-    as: 'body',
-    lineHeight: 'relaxed',
-    children: 'Text with relaxed line height for better readability in longer content',
-  },
-};
