@@ -1,6 +1,5 @@
-// src/components/List/List.jsx
 import * as React from 'react'
-import { Paragraph } from '../components/Paragraph'
+import { Paragraph } from './Paragraph'
 
 export const List = React.forwardRef(
   ({ type = 'unordered', items = [], style = {}, ...props }, ref) => {

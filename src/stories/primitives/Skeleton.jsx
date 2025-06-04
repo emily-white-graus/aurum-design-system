@@ -1,4 +1,3 @@
-// src/components/Skeleton/Skeleton.jsx
 import * as React from 'react'
 import { Skeleton as RadixSkeleton } from '@radix-ui/themes'
 import '@radix-ui/themes/styles.css'

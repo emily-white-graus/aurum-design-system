@@ -1,4 +1,3 @@
-// Flex.stories.jsx
 import React from 'react'
 import { Flex } from './Flex'
 import { Box } from './Box'
@@ -50,9 +49,9 @@ export default {
 
 const Template = (args) => (
   <Flex style={{ width: '400px', height: '400px' }} {...args}>
-    <Box />
-    <Box />
-    <Box />
+    <Box style={{ width: '64px', height: '64px', backgroundColor: 'teal' }} />
+    <Box style={{ width: '64px', height: '64px', backgroundColor: 'orange' }} />
+    <Box style={{ width: '64px', height: '64px', backgroundColor: 'pink' }} />
   </Flex>
 )
 

@@ -24,9 +24,9 @@ export default {
 
 const Template = (args) => (
   <Stack {...args}>
-    <Box style={{ width: '50px', height: '50px', backgroundColor: 'teal' }} />
-    <Box style={{ width: '50px', height: '50px', backgroundColor: 'orange' }} />
-    <Box style={{ width: '50px', height: '50px', backgroundColor: 'pink' }} />
+    <Box style={{ width: '64px', height: '64px', backgroundColor: 'teal' }} />
+    <Box style={{ width: '64px', height: '64px', backgroundColor: 'orange' }} />
+    <Box style={{ width: '64px', height: '64px', backgroundColor: 'pink' }} />
   </Stack>
 )
 

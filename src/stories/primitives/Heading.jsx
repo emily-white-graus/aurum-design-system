@@ -1,6 +1,5 @@
-// Heading.jsx
 import React from 'react';
-import { Text } from '../primitives/Text'; 
+import { Text } from './Text'; 
 
 /**
  * Heading component renders semantic heading levels using the Text primitive.

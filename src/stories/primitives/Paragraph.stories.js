@@ -1,7 +1,7 @@
 import { Paragraph } from './Paragraph';
 
 export default {
-  title: 'Components/Paragraph',
+  title: 'Primitives/Paragraph',
   component: Paragraph,
   parameters: {
     layout: 'centered',
