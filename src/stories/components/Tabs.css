@@ -1,0 +1,40 @@
+.tabs-container {
+    background: white;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .tab-button {
+    background: transparent;
+    border: none;
+    position: relative;
+    padding: 8px 4px;
+    font-weight: normal;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .tab-button:hover:not(.disabled) {
+    background-color: #e6efec;
+  }
+  
+  .tab-button.disabled {
+    color: #b0b0b0;
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+  }
+  
+  .tab-button.active {
+    font-weight: bold;
+  }
+  
+  .tab-underline {
+    height: 2px;
+    background-color: #00c8db;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
