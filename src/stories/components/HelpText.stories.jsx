@@ -32,9 +32,6 @@ Default.args = { variant: 'default' }
 export const Error = Template.bind({})
 Error.args = { variant: 'error' }
 
-export const Text = Template.bind({})
-Text.args = { variant: 'text' }
-
 export const Success = Template.bind({})
 Success.args = { variant: 'success' }
 

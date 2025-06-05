@@ -21,9 +21,9 @@ export const Alert = ({
 
   return (
     <Box className={`alert alert-${variant}`}>
-      <Stack direction="row" align="center" gap="8px">
+      <Stack direction="row" align="center" gap="4">
         <Box className="alert-icon">{iconMap[variant]}</Box>
-        <Text className="alert-message">
+        <Text as="span" className="alert-message">
           {message}
           {linkText && linkHref && (
             <>

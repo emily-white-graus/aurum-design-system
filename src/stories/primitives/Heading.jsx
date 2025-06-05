@@ -10,6 +10,7 @@ import { Text } from './Text';
  * @param {string} className - Additional CSS classes
  * @param {object} ...rest - Additional props to pass to the Text component
  */
+
 export const Heading = ({
   level = 'h1',
   children,

@@ -31,15 +31,15 @@
 
 /* Variants */
 .badge--default {
-  background-color: var(--primitives-color-white-100);
-  color: var(--primitives-color-navy-100);
-  border-color: var(--primitives-color-grey-100);
+  background-color: var(--alias-color-bg-light);
+  color: var(--alias-color-text-text-black-100);
+  border-color: var(--alias-color-border-light);
 }
 
 .badge--error {
   background-color: var(--primitives-color-destructive-red-50);
   color: var(--primitives-color-destructive-red-100);
-  border-color: var(--primitives-color-destructive-red-75);
+  border-color: var(--alias-color-border-error);
 }
 
 .badge--success {

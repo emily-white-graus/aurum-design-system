@@ -5,8 +5,7 @@ import './HelpText.css'
 export const HelpText = ({ children, variant = 'default', className = '', ...props }) => {
   return (
     <Text 
-      style={{ color: 'inherit' }}
-      as="subtitle"
+      as="span"
       className={`help-text help-text--${variant} ${className}`.trim()}
       {...props}
     >

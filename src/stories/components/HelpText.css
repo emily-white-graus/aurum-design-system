@@ -1,9 +1,9 @@
 .help-text {
     font-family: var(--font-common-font-family);
-    font-size: var(--font-label-label-2-regular-font-size);
-    line-height: var(--font-label-label-2-regular-line-height);
-    letter-spacing: var(--font-label-label-2-regular-letter-spacing);
-    font-weight: var(--font-label-label-2-medium-font-weight);
+    font-size: var(--font-label-label-5-medium-font-size);
+    line-height: var(--font-label-label-5-medium-line-height);
+    letter-spacing: var(--font-label-label-5-medium-letter-spacing);
+    font-weight: var(--font-label-label-5-medium-font-weight);
     margin: 0;
     padding: 0;
   }
@@ -14,18 +14,14 @@
   }
   
   .help-text--error {
-    color: var(--primitives-color-destructive-red-100);
-  }
-  
-  .help-text--text {
-    color: var(--primitives-color-grey-300);
+    color: var(--alias-color-text-text-error);
   }
   
   .help-text--success {
-    color: var(--primitives-color-green-200);
+    color: var(--alias-color-text-text-success);
   }
   
   .help-text--info {
-    color: var(--primitives-color-blue-300);
+    color: var(--alias-color-text-text-info);
   }
   

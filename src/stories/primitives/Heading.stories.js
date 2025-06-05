@@ -32,6 +32,9 @@ export const H1 = {
   args: {
     level: 'h1',
     children: 'Example',
+    style: {
+      color: 'black',
+    },
   },
 };
 
@@ -39,6 +42,9 @@ export const H2 = {
   args: {
     level: 'h2',
     children: 'Example',
+    style: {
+      color: 'black',
+    },
   },
 };
 
@@ -47,6 +53,9 @@ export const H3 = {
   args: {
     level: 'h3',
     children: 'Example',
+    style: {
+      color: 'black',
+    },
   },
 };
 
@@ -55,5 +64,8 @@ export const H4 = {
   args: {
     level: 'h4',
     children: 'Example',
+    style: {
+      color: 'black',
+    },
   },
 };

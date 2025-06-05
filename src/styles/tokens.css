@@ -413,6 +413,7 @@
   --alias-color-text-text-success: var(--primitives-color-green-200);
   --alias-color-text-text-error-contrast: var(--alias-color-btn-destructive-bg-hover);
   --alias-color-text-text-success-contrast: var(--primitives-color-green-100);
+  --alias-color-text-text-info: var(--primitives-color-blue-300);
   --alias-color-text-text-white-100: var(--primitives-color-white-100);
   --alias-color-text-text-grey-50: var(--primitives-color-grey-50);
   --alias-color-text-text-grey-100: var(--primitives-color-grey-100);
