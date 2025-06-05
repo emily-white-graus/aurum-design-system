@@ -1,0 +1,17 @@
+.card-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  
+  .card-title {
+    font-size: var(--font-heading-h2-h2-font-size);
+    font-weight: 600;
+  }
+  
+  .card-location {
+    font-size: var(--font-paragrapgh-p1-p1-font-size);
+  }
+
+  

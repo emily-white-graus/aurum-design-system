@@ -7,24 +7,24 @@
 
 /* Semantic base styles */
 .text-h1 {
-  font-size: var(--font-heading-h1-medium-font-size);
-  font-weight: var(--font-heading-h1-medium-font-weight);
-  letter-spacing: var(--font-heading-h1-medium-letter-spacing);
-  line-height: var(--font-heading-h1-medium-line-height);
+  font-size: var(--font-heading-h1-h1-font-size);
+  font-weight: var(--font-heading-h1-h1-font-weight);
+  letter-spacing: var(--font-heading-h1-h1-letter-spacing);
+  line-height: var(--font-heading-h1-h1-line-height);
 }
 
 .text-h2 {
-  font-size: var(--font-heading-h2-medium-font-size);
-  font-weight: var(--font-heading-h2-medium-font-weight);
-  letter-spacing: var(--font-heading-h2-medium-letter-spacing);
-  line-height: var(--font-heading-h2-medium-line-height);
+  font-size: var(--font-heading-h2-h2-font-size);
+  font-weight: var(--font-heading-h2-h2-font-weight);
+  letter-spacing: var(--font-heading-h2-h2-letter-spacing);
+  line-height: var(--font-heading-h2-h2-line-height);
 }
 
 .text-h3 {
-  font-size: var(--font-heading-h3-medium-font-size);
-  font-weight: var(--font-heading-h3-medium-font-weight);
-  letter-spacing: var(--font-heading-h3-medium-letter-spacing);
-  line-height: var(--font-heading-h3-medium-line-height);
+  font-size: var(--font-heading-h3-h3-font-size);
+  font-weight: var(--font-heading-h3-h3-font-weight);
+  letter-spacing: var(--font-heading-h3-h3-letter-spacing);
+  line-height: var(--font-heading-h3-h3-line-height);
 }
 
 .text-h4 {
@@ -36,12 +36,12 @@
 
 .text-body,
 .text-p {
-  font-size: var(--font-body-body-1-regular-font-size);
-  font-weight: var(--font-body-body-1-regular-font-weight);
-  line-height: var(--font-body-body-1-regular-line-height);
+  font-size: var(--font-paragrapgh-p1-p1-font-size);
+  font-weight: var(--font-paragrapgh-p1-p1-font-weight);
+  line-height: var(--font-paragrapgh-p1-p1-line-height);
 }
 
 .text-subtitle {
-  font-size: var(--font-body-body-3-regular-font-size);
+  font-size: var(--font-paragrapgh-btn-text-1-btn-text-1-font-size);
 }
 

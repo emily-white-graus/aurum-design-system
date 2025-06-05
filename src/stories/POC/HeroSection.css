@@ -1,0 +1,24 @@
+.hero {
+    width: 100%;
+    background-color: #f0f7f5;
+    padding: 60px 100px;
+    border-radius: 0 0 12px 12px;
+    margin: 0 auto;
+  }
+  
+  .hero-heading {
+    color: #005c66;
+    display: block;
+    font-size: var(--font-heading-h1-h1-font-size);
+    font-weight: 600;
+  }
+  
+  .hero-paragraph {
+    line-height: 1.6;
+    display: block;
+  }
+
+  .hero-button {
+    width: fit-content;
+  }
+  

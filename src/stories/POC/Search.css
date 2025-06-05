@@ -1,0 +1,11 @@
+.search-wrapper {
+    min-width: 420px;
+    align: center;
+    gap: 12px;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+
+  
