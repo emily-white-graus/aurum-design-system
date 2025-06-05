@@ -2,6 +2,7 @@ import React from 'react'
 import './Badge.css'
 import { Box } from '../primitives/Box'
 import { Text } from '../primitives/Text'
+import { Stack } from '../primitives/Stack'
 
 export const Badge = ({
   children,
@@ -12,16 +13,18 @@ export const Badge = ({
 }) => {
   return (
     <Box className={`badge badge--${variant}`} {...props}>
-      {icon && (
-        <span className="badge-icon">
-          {icon}
-        </span>
-      )}
+      <Stack direction='row' gap='1'>
       {!iconOnly && (
         <Text as="span" className="badge-text">
           {children}
         </Text>
       )}
+      {icon && (
+        <span className="badge-icon">
+          {icon}
+        </span>
+      )}
+      </Stack>
     </Box>
   )
 }

@@ -36,7 +36,7 @@ export const Pagination = ({
 
   return (
     <Box className="pagination-container">
-      <Stack direction="row" gap="8px" align="center">
+      <Stack direction="row" gap="8" align="center">
         <button
           onClick={() => handleChange(1)}
           className={`pagination-button ${disabled ? "disabled" : ""}`}

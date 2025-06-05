@@ -6,7 +6,21 @@ export default {
   title: 'Components/Badge',
   component: Badge,
   tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      control: { type: 'select' },
+      options: ['default', 'error', 'success', 'warning', 'disabled', 'with icon', 'icon only'],
+      description: 'Visual style of the badge',
+    },
+  },
+  args: {
+    variant: 'default',
+  },
+  parameters: {
+    layout: 'centered',
+  },
 }
+
 
 export const Default = () => <Badge>Default</Badge>
 export const Error = () => <Badge variant="error">Error</Badge>

@@ -5,6 +5,9 @@ export default {
   title: "Components/Pagination",
   component: Pagination,
   tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
 };
 
 const Template = (args) => {

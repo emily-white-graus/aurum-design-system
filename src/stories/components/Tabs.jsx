@@ -7,7 +7,7 @@ import { Stack } from "../primitives/Stack";
 export const Tabs = ({ tabs, activeIndex, onTabClick }) => {
   return (
     <Box className="tabs-container">
-      <Stack direction="row" gap="16px">
+      <Stack direction="row">
         {tabs.map((tab, index) => {
           const isActive = activeIndex === index;
           const isDisabled = tab.disabled;
@@ -21,7 +21,7 @@ export const Tabs = ({ tabs, activeIndex, onTabClick }) => {
               onClick={() => !isDisabled && onTabClick(index)}
               disabled={isDisabled}
             >
-              <Text>{tab.label}</Text>
+              <Text as='spam'> {tab.label}</Text>
               {isActive && <Box className="tab-underline" />}
             </button>
           );

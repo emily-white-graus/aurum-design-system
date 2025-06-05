@@ -5,28 +5,24 @@
   border-radius: var(--primitives-radius-rounded-md); /* 8px */
   padding: 0 var(--primitives-spacing-4); /* 0 12px */
   height: 24px;
-  font-size: var(--font-body-body-4-regular-font-size); /* 12px */
-  font-weight: var(--font-label-label-3-medium-font-weight); /* 500 */
   white-space: nowrap;
   user-select: none;
   border: var(--primitives-border-stroke-light) solid transparent; /* 1px */
   box-sizing: border-box;
   overflow: hidden;
-  min-width: var(--primitives-spacing-20); /* 64px */
   font-family: var(--primitives-typography-font-family-primary);
 }
 
 .badge-text {
-  font-size: var(--font-body-body-4-regular-font-size); /* 12px */
-  font-weight: var(--font-label-label-3-medium-font-weight); /* 500 */
-  line-height: var(--font-body-body-4-regular-line-height); /* 16px */
+  font-size: var(--font-label-label-5-medium-font-size); /* 12px */
+  font-weight: var(--font-label-label-5-medium-font-weight); /* 500 */
+  line-height: var(--font-label-label-5-medium-line-height); /* 16px */
 }
 
 .badge-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: var(--primitives-spacing-2); /* 4px */
 }
 
 /* Variants */
@@ -37,27 +33,26 @@
 }
 
 .badge--error {
-  background-color: var(--primitives-color-destructive-red-50);
-  color: var(--primitives-color-destructive-red-100);
+  background-color: var(--alias-color-bg-light-red);
+  color: var(--alias-color-text-text-black-100);
   border-color: var(--alias-color-border-error);
 }
 
 .badge--success {
-  background-color: var(--primitives-color-green-50);
-  color: var(--primitives-color-green-200);
-  border-color: var(--primitives-color-green-100);
+  background-color: var(--alias-color-bg-light-green);
+  color: var(--alias-color-text-text-black-100);
+  border-color: var(--alias-color-border-success);
 }
 
 .badge--warning {
-  background-color: var(--primitives-color-yellow-50);
-  color: var(--primitives-color-orange-200);
-  border-color: var(--primitives-color-orange-100);
+  background-color: var(--alias-color-bg-light-yellow);
+  color: var(--alias-color-text-text-black-100);
+  border-color: var(--alias-color-border-warning);
 }
 
 .badge--disabled {
-  background-color: var(--primitives-color-white-100);
-  color: var(--primitives-color-navy-100);
-  opacity: 0.4;
+  background-color: var(--alias-color-btn-primary-bg-disabled);
+  color: var(--alias-color-text-text-grey-200);
   cursor: not-allowed;
-  border-color: transparent;
+  border-color: var(--alias-color-border-light);
 }

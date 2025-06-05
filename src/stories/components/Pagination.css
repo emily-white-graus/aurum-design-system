@@ -1,33 +1,38 @@
 .pagination-container {
-    background: white;
-    padding: 16px;
-    border-radius: 6px;
-    border: 1px solid #e0e0e0;
-  }
-  
-  .pagination-button {
-    background-color: transparent;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: normal;
-  }
-  
-  .pagination-button:hover:not(.disabled):not(.focused) {
-    background-color: #edf2f1;
-  }
-  
-  .pagination-button.focused {
-    background-color: #007b8f;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .pagination-button.disabled {
-    color: #b0b0b0;
-    cursor: not-allowed;
-    pointer-events: none;
-    background-color: #f6f6f6;
-  }
-  
+  background: white;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  font-family: var(--font-common-font-family);
+}
+
+.pagination-button {
+  background-color: transparent;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: var(--font-label-label-1-regular-font-weight);
+  font-size: var(--font-label-label-1-regular-font-size);
+  line-height: var(--font-label-label-1-regular-line-height);
+  letter-spacing: var(--font-label-label-1-regular-letter-spacing);
+  font-family: var(--font-common-font-family);
+}
+
+.pagination-button:hover:not(.disabled):not(.focused) {
+  background-color: #edf2f1;
+}
+
+.pagination-button.focused {
+  background-color: #007b8f;
+  color: white;
+  font-weight: var(--font-label-label-1-bold-font-weight);
+}
+
+.pagination-button.disabled {
+  color: #b0b0b0;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #f6f6f6;
+  font-weight: var(--font-paragrapgh-btn-text-1-btn-text-1-font-weight);
+}

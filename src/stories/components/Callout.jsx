@@ -1,4 +1,7 @@
 import React from 'react';
+import { Box } from "../primitives/Box";
+import { Stack } from "../primitives/Stack";
+import { Text } from "../primitives/Text";
 import { Info, CheckCircle, AlertTriangle, AlertCircle } from 'lucide-react';
 import './callout.css';
 
@@ -14,30 +17,25 @@ import './callout.css';
  * @param {string} className - Additional CSS classes
  */
 
-export const Callout = (props) => {
-  const { variant = 'default', children, className = '' } = props;
-
-  const getIcon = () => {
-    switch (variant) {
-      case 'success':
-        return <CheckCircle size={16} />;
-      case 'warning':
-        return <AlertCircle size={16} />;
-      case 'danger':
-        return <AlertTriangle size={16} />;
-      default:
-        return <Info size={16} />;
-    }
+export const Callout = ({
+  variant = "default",
+  message,
+}) => {
+  const iconMap = {
+    default: <Info size={18} />,
+    warning: <AlertCircle size={18} />,
+    success: <CheckCircle size={18} />,
+    danger: <AlertTriangle size={18} />,
   };
 
   return (
-    <div className={`callout callout-${variant} ${className}`}>
-      <div className="callout-icon">
-        {getIcon()}
-      </div>
-      <div className="callout-content">
-        {children}
-      </div>
-    </div>
+    <Box className={`callout callout-${variant}`}>
+      <Stack direction="row" align="center" gap="4">
+        <Box className="callout-icon">{iconMap[variant]}</Box>
+        <Text as="span" className="callout-message">
+          {message}
+        </Text>
+      </Stack>
+    </Box>
   );
 };

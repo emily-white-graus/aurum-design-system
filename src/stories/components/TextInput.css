@@ -6,8 +6,8 @@
   
   .text-input {
     font-family: var(--font-common-font-family);
-    font-size: var(--font-body-body-2-regular-font-size);
-    line-height: var(--font-body-body-2-regular-line-height);
+    font-size: var(--font-label-label-1-regular-font-size);
+    line-height: var(  --font-label-label-1-regular-line-height);
     padding: 12px 40px 12px 16px; /* space for error icon */
     border-radius: var(--primitives-radius-rounded-md);
     border: 1px solid var(--primitives-color-grey-100);

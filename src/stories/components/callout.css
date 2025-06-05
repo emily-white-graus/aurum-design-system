@@ -1,16 +1,17 @@
-/* Callout.css */
-
 .callout {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  padding: 1rem;
+  padding: 14px 20px;
   border-radius: 0.5rem;
   border: 1px solid;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  max-width: 100%;
+  font-family: var(--font-common-font-family, Arial, Helvetica, sans-serif);
+  font-size: var(--font-paragrapgh-btn-text-2-btn-text-2-font-size, 14px);
+  font-weight: var(--font-paragrapgh-btn-text-2-btn-text-2-font-weight, 400);
+  line-height: var(--font-paragrapgh-btn-text-2-btn-text-2-line-height, 18px);
+  display: inline-block;
+  width: fit-content;
+  color: var(--primitives-color-black-100);
 }
 
 .callout-icon {
@@ -18,7 +19,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-top: 0.125rem;
+  color: var(--primitives-color-black-100);
 }
 
 .callout-content {
@@ -26,46 +27,22 @@
   margin: 0;
 }
 
-/* Default variant */
 .callout-default {
-  background-color: #dbeafe;
-  border-color: #93c5fd;
-  color: #000000;
+  background-color: var(--alias-color-bg-light-blue);
+  border-color: var(--alias-color-border-info);
 }
 
-.callout-default .callout-icon {
-  color: #000000;
-}
-
-/* Success variant */
 .callout-success {
-  background-color: #dcfce7;
-  border-color: #86efac;
-  color: #000000;
+  background-color: var(--alias-color-bg-light-green);
+  border-color: var(--alias-color-border-success);
 }
 
-.callout-success .callout-icon {
-  color: #000000;
-}
-
-/* Warning variant */
 .callout-warning {
-  background-color: #fef3c7;
-  border-color: #fcd34d;
-  color: #000000;
+  background-color: var(--alias-color-bg-light-yellow);
+  border-color: var(--alias-color-border-warning);
 }
 
-.callout-warning .callout-icon {
-  color: #000000;
-}
-
-/* Danger variant */
 .callout-danger {
-  background-color: #fecaca;
-  border-color: #fca5a5;
-  color: #000000;
-}
-
-.callout-danger .callout-icon {
-  color: #000000;
+  background-color: var(--alias-color-bg-light-red);
+  border-color: var(--alias-color-border-error);
 }

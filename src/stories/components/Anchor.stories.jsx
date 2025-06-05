@@ -1,51 +1,45 @@
-import React from 'react'
-import { Anchor } from './Anchor'
+import React from 'react';
+import { Anchor } from './Anchor';
 
 export default {
-  title: 'Primitives/Anchor',
+  title: 'Components/Anchor',
   component: Anchor,
-  argTypes: {
-    href: {
-      control: 'text',
-      description: 'The URL the anchor links to',
-    },
-    target: {
-      control: { type: 'select' },
-      options: ['_self', '_blank'],
-      description: 'Specifies where to open the linked document',
-    },
-    underline: {
-      control: 'boolean',
-      description: 'Show underline',
-    },
-    color: {
-      control: 'text',
-      description: 'Text color',
-    },
-    fontWeight: {
-      control: { type: 'select' },
-      options: ['normal', 'medium', 'bold'],
-      description: 'Font weight',
-    },
-    children: {
-      control: 'text',
-      description: 'Link text',
-    },
-  },
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
-}
+};
 
-const Template = (args) => <Anchor {...args} />
+const Template = (args) => <Anchor {...args} />;
 
-export const Default = Template.bind({})
+export const Default = Template.bind({});
 Default.args = {
+  href: '#',
+  children: 'Anchor',
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  href: '#',
+  children: 'Anchor',
+  withIcon: true,
+};
+
+export const Visited = Template.bind({});
+Visited.args = {
   href: 'https://example.com',
-  target: '_blank',
-  underline: true,
-  color: 'blue',
-  fontWeight: 'medium',
-  children: 'Visit Example.com',
-}
+  children: 'Anchor',
+  className: 'visited',
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  href: '#',
+  children: 'Anchor',
+  disabled: true,
+};
+
+export const WithIconDisabled = Template.bind({});
+WithIconDisabled.args = {
+  href: '#',
+  children: 'Anchor',
+  disabled: true,
+  withIcon: true,
+};

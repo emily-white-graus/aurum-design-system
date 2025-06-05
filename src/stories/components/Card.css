@@ -1,33 +1,65 @@
 .card {
-    background-color: #f1fafa;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-  
-  .card-small {
-    max-width: 240px;
-    padding: 12px;
-  }
-  
-  .card-medium {
-    max-width: 360px;
-    padding: 16px;
-  }
-  
-  .card-large {
-    max-width: 480px;
-    padding: 20px;
-  }
-  
-  .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  
-  .card-body {
-    font-size: 14px;
-    color: #333;
-  }
-  
+  background-color: var(--alias-color-bg-light);
+  border: 1px solid var(--alias-color-border-light);
+  border-radius: 0.5rem;
+  color: var(--primitives-color-black-100);
+  font-family: var(--font-common-font-family, Arial, sans-serif);
+}
+
+.card-large {
+  padding: 24px;
+  max-width: 420px;
+}
+
+.card-medium {
+  padding: 20px;
+  max-width: 360px;
+}
+
+.card-small {
+  padding: 16px;
+  max-width: 300px;
+}
+
+.card-heading {
+  font-weight: 700;
+  margin: 0;
+  display: block;
+}
+
+/* Heading size variants */
+.card-heading-large {
+  font-size: var(--font-heading-h2-font-size, 20px);
+  line-height: var(--font-heading-h2-line-height, 28px);
+}
+
+.card-heading-medium {
+  font-size: var(--font-heading-h3-font-size, 18px);
+  line-height: var(--font-heading-h3-line-height, 26px);
+}
+
+.card-heading-small {
+  font-size: var(--font-heading-h4-font-size, 16px);
+  line-height: var(--font-heading-h4-line-height, 24px);
+}
+
+/* Paragraph/text size variants */
+.card-content {
+  font-weight: 400;
+  display: block;
+}
+
+.card-text-large {
+  font-size: var(--font-paragrapgh-p1-font-size, 16px);
+  line-height: var(--font-paragrapgh-p1-line-height, 24px);
+}
+
+.card-text-medium {
+  font-size: var(--font-paragrapgh-btn-text-1-btn-text-1-font-size, 14px);
+  line-height: var(--font-paragrapgh-btn-text-1-btn-text-1-line-height, 20px);
+}
+
+.card-text-small {
+  font-size: var(--font-paragrapgh-btn-text-2-btn-text-2-font-size, 12px);
+  line-height: var(--font-paragrapgh-btn-text-2-btn-text-2-line-height, 18px);
+}

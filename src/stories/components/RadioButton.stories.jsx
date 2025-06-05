@@ -8,6 +8,7 @@ export default {
   parameters: {
     layout: 'centered',
   },
+
 }
 
 const Template = (args) => {

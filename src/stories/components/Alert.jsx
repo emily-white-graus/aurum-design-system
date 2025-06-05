@@ -3,7 +3,7 @@ import "./Alert.css";
 import { Box } from "../primitives/Box";
 import { Stack } from "../primitives/Stack";
 import { Text } from "../primitives/Text";
-import { X, Info, CheckCircle, AlertCircle } from "lucide-react";
+import { X, Info, CheckCircle, AlertCircle, AlertTriangle } from "lucide-react";
 
 export const Alert = ({
   variant = "default",
@@ -13,10 +13,10 @@ export const Alert = ({
   onClose,
 }) => {
   const iconMap = {
-    default: <Info size={16} />,
-    warning: <AlertCircle size={16} />,
-    success: <CheckCircle size={16} />,
-    error: <AlertCircle size={16} />,
+    default: <Info size={18} />,
+    warning: <AlertCircle size={18} />,
+    success: <CheckCircle size={18} />,
+    error: <AlertTriangle size={18} />,
   };
 
   return (
@@ -35,11 +35,9 @@ export const Alert = ({
           )}
         </Text>
       </Stack>
-      {onClose && (
         <button className="alert-close" onClick={onClose}>
-          <X size={16} />
+          <X size={20} />
         </button>
-      )}
     </Box>
   );
 };

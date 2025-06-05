@@ -26,23 +26,6 @@ export const TextInput = React.forwardRef(
     `.trim()
 
     return (
-      <Box style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-        {label && (
-          <Text
-            as="label"
-            style={{
-              fontSize: 'var(--font-label-label-2-regular-font-size)',
-              lineHeight: 'var(--font-label-label-2-regular-line-height)',
-              fontWeight: 'var(--font-label-label-2-medium-font-weight)',
-              color: disabled
-                ? 'var(--primitives-color-grey-200)'
-                : 'var(--primitives-color-navy-100)',
-            }}
-          >
-            {label}
-          </Text>
-        )}
-
         <Box className={wrapperClass}>
           <input
             ref={ref}
@@ -55,11 +38,10 @@ export const TextInput = React.forwardRef(
           />
           {error && (
             <Box className="text-input__error-icon">
-              <AlertCircle size={16} />
+              <AlertCircle size={18} />
             </Box>
           )}
         </Box>
-      </Box>
     )
   }
 )

@@ -1,15 +1,27 @@
 import React from "react";
-import "./Card.css";
 import { Box } from "../primitives/Box";
+import { Stack } from "../primitives/Stack";
 import { Text } from "../primitives/Text";
+import "./Card.css";
 
-export const Card = ({ size = "medium", title, children }) => {
+/**
+ * Card component with size variants: large, medium, small.
+ * @param {string} variant - Card size variant
+ * @param {string} heading - Card heading
+ * @param {string} content - Card body text
+ */
+
+export const Card = ({ variant = "medium", heading, content }) => {
   return (
-    <Box className={`card card-${size}`}>
-      <Text as="h3" className="card-title">
-        {title}
-      </Text>
-      <Text className="card-body">{children}</Text>
+    <Box className={`card card-${variant}`}>
+      <Stack gap="2">
+        <Text as="span" className={`card-heading card-heading-${variant}`}>
+          {heading}
+        </Text>
+        <Text as="span" className={`card-content card-text-${variant}`}>
+          {content}
+        </Text>
+      </Stack>
     </Box>
   );
 };

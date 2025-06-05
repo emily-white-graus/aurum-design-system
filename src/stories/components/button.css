@@ -5,7 +5,9 @@
   border-radius: var(--primitives-radius-rounded-full); /* 9999px */
   gap: 0.5rem;
   transition: all 0.2s ease-in-out;
-  font-family: var(--primitives-typography-font-family-primary, inherit);
+  font-family: var(--font-common-font-family, inherit);
+  font-size: var(--font-label-label-3-bold-font-size);
+  font-weight: var(--font-label-label-3-bold-font-weight);
   padding: 0 1rem;
   border: none;
   background: transparent;
