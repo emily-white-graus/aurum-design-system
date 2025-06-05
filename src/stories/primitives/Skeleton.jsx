@@ -1,57 +1,70 @@
 import * as React from 'react'
-import { Skeleton as RadixSkeleton } from '@radix-ui/themes'
-import '@radix-ui/themes/styles.css'
 
 const variantStyles = {
   shape: {
     width: '100px',
     height: '100px',
-    radius: 'full',
+    radius: '9999px',
   },
   header: {
-    width: '60%',
+    width: '300px',
     height: '32px',
-    radius: 'medium',
+    radius: '8px',
   },
   text: {
-    width: '80%',
+    width: '250px',
     height: '16px',
-    radius: 'small',
+    radius: '4px',
   },
   button: {
     width: '120px',
     height: '40px',
-    radius: 'large',
+    radius: '12px',
   },
 }
 
+// Pure CSS keyframes for shimmer effect
+const shimmerKeyframes = `
+  @keyframes skeleton-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+`
+
+// Inject keyframes only once
+if (
+  typeof document !== 'undefined' &&
+  !document.getElementById('skeleton-shimmer')
+) {
+  const styleTag = document.createElement('style')
+  styleTag.id = 'skeleton-shimmer'
+  styleTag.innerHTML = shimmerKeyframes
+  document.head.appendChild(styleTag)
+}
+
 export const Skeleton = React.forwardRef(
-  ({ variant, width, height, radius, ...props }, ref) => {
+  ({ variant, width, height, radius, style = {}, ...props }, ref) => {
     const variantStyle = variant ? variantStyles[variant] : {}
 
     const resolvedWidth = width || variantStyle.width || '100%'
     const resolvedHeight = height || variantStyle.height || '1rem'
-    const resolvedRadius = radius || variantStyle.radius || 'medium'
+    const resolvedRadius = radius || variantStyle.radius || '4px'
 
-    // If width is percentage-based, wrap in constrained parent
-    const needsWrapper = typeof resolvedWidth === 'string' && resolvedWidth.includes('%')
-
-    const content = (
-      <RadixSkeleton
+    return (
+      <div
         ref={ref}
-        width={resolvedWidth}
-        height={resolvedHeight}
-        radius={resolvedRadius}
         {...props}
+        style={{
+          width: resolvedWidth,
+          height: resolvedHeight,
+          borderRadius: resolvedRadius,
+          background:
+            'linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%)',
+          backgroundSize: '200% 100%',
+          animation: 'skeleton-shimmer 1.5s infinite',
+          ...style,
+        }}
       />
-    )
-
-    return needsWrapper ? (
-      <div style={{ width: '300px' /* or any fixed constraint */, display: 'inline-block' }}>
-        {content}
-      </div>
-    ) : (
-      <div style={{ display: 'inline-block' }}>{content}</div>
     )
   }
 )

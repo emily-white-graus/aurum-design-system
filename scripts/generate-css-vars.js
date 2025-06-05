@@ -13,14 +13,21 @@ function toKebabCase(str) {
   return str.replace(/[A-Z]/g, (m) => '-' + m.toLowerCase()).replace(/[_\s]+/g, '-');
 }
 
+function isSkippable(value) {
+  const skippableValues = ['none', 'normal', '', null, undefined];
+  return skippableValues.includes(value);
+}
+
 function flattenTokens(obj, prefix = []) {
   let vars = [];
+
   for (const key in obj) {
     const value = obj[key];
 
-    // Support custom-fontStyle (font tokens)
+    // Handle custom font styles
     if (value?.type === 'custom-fontStyle' && value.value) {
       for (const [prop, val] of Object.entries(value.value)) {
+        if (isSkippable(val)) continue;
         const cssVarName = `--${[...prefix, key, prop].map(toKebabCase).join('-')}`;
         const cssValue =
           typeof val === 'number' && ['fontSize', 'lineHeight', 'letterSpacing'].includes(prop)
@@ -29,20 +36,28 @@ function flattenTokens(obj, prefix = []) {
         vars.push(`${cssVarName}: ${cssValue};`);
       }
 
-    // Support primitive tokens (like color, spacing, radius, etc.)
+    // Handle primitive/alias tokens
     } else if (value?.value !== undefined) {
+      let cssValue = value.value;
+      if (isSkippable(cssValue)) continue;
+
       const cssVarName = `--${[...prefix, key].map(toKebabCase).join('-')}`;
-      const cssValue =
-        typeof value.value === 'number' && value.unit
-          ? `${value.value}${value.unit}`
-          : value.value;
+
+      if (typeof cssValue === 'string' && cssValue.startsWith('{') && cssValue.endsWith('}')) {
+        const ref = cssValue.slice(1, -1);
+        cssValue = `var(--${ref.split('.').map(toKebabCase).join('-')})`;
+      } else if (typeof cssValue === 'number' && value.unit) {
+        cssValue = `${cssValue}${value.unit}`;
+      }
+
       vars.push(`${cssVarName}: ${cssValue};`);
 
-    // Recurse if value is an object
+    // Recurse for nested objects
     } else if (typeof value === 'object') {
       vars = vars.concat(flattenTokens(value, [...prefix, key]));
     }
   }
+
   return vars;
 }
 
@@ -54,14 +69,17 @@ function generateCSS(tokens) {
 // Run
 const rawTokens = JSON.parse(fs.readFileSync(inputPath, 'utf-8'));
 
-// Only include 'font' and 'primitives' keys
+// Include top-level keys
 const tokens = {
   ...(rawTokens.font ? { font: rawTokens.font } : {}),
   ...(rawTokens.primitives ? { primitives: rawTokens.primitives } : {}),
+  ...(rawTokens.alias ? { alias: rawTokens.alias } : {}),
+  ...(rawTokens['alias-typography'] ? { 'alias-typography': rawTokens['alias-typography'] } : {}),
 };
 
 const css = generateCSS(tokens);
 
+// Write to file
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, css, 'utf-8');
-console.log(`✅ CSS variables written to ${outputPath}`);
+console.log(`✅ Clean CSS variables written to ${outputPath}`);
