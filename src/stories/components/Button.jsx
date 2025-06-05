@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Box } from '../primitives/Box'
 import { Text } from '../primitives/Text'
-import './Button.css'
+import './button.css'
 
 export const Button = React.forwardRef(
   (
