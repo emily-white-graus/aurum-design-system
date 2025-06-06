@@ -2,7 +2,7 @@ import React from "react";
 import { HeroSection } from "./HeroSection";
 
 export default {
-  title: "POC/HeroSection",
+  title: "POC components/HeroSection",
   component: HeroSection,
   tags: ["autodocs"],
 };

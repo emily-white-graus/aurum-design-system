@@ -42,14 +42,14 @@ const cardData = [
 export const CardStack = () => {
   return (
     <Stack direction="column" gap="4">
-      {[0, 1].map((rowIndex) => (
+      {[0, 1, 2].map((rowIndex) => (
         <Stack key={rowIndex} direction="row" gap="4">
-          {cardData.slice(rowIndex * 3, rowIndex * 3 + 3).map((card, index) => (
-            <Card key={index} variant="medium" className='card-stack' >
-              <Stack gap="2">
+          {cardData.slice(rowIndex * 2, rowIndex * 2 + 2).map((card, index) => (
+            <Card key={index} variant="medium" className="card-stack">
+              <Stack gap="4">
                 <CardHeading variant="medium">{card.heading}</CardHeading>
                 <CardContent variant="medium">{card.content}</CardContent>
-                <Anchor href={card.link}>More About This Role</Anchor>
+                <Anchor className="card-link" href={card.link}>More About This Role</Anchor>
               </Stack>
             </Card>
           ))}

@@ -2,7 +2,7 @@ import React from "react";
 import { Search } from "./Search";
 
 export default {
-  title: "POC/Search",
+  title: "POC components/Search",
   component: Search,
   tags: ["autodocs"],
   parameters: {

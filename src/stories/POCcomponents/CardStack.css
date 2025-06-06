@@ -6,13 +6,10 @@
   }
 
 .card-stack {
-  width: 400px;
+  width: 300px;
 }
   
   .card-link {
-    margin-top: 8px;
-    display: inline-block;
-    text-decoration: underline;
     font-size: 12px;
   }
   

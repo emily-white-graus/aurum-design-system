@@ -1,6 +1,6 @@
 .search-wrapper {
-    min-width: 420px;
-    align: center;
+    width: 420px;
+    align-items: center;
     gap: 12px;
   }
   

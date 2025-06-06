@@ -1,0 +1,38 @@
+.career-page {
+    background-color: #ffffff;
+    padding: 0;
+    font-family: var(--font-common-font-family, Arial, sans-serif);
+  }
+  
+  .career-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .career-content {
+    padding: 64px 16px;
+    background-color: #ffffff;
+  }
+  
+  .career-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  .career-heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00474f;
+    text-align: center;
+  }
+  
+  .career-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  

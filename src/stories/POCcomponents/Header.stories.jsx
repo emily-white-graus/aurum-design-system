@@ -2,7 +2,7 @@ import React from "react";
 import { Header } from "./Header";
 
 export default {
-  title: "POC/Header",
+  title: "POC components/Header",
   component: Header,
   tags: ["autodocs"],
 };
