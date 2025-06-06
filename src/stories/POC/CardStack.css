@@ -1,17 +1,18 @@
-.card-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  
-  .card-title {
-    font-size: var(--font-heading-h2-h2-font-size);
-    font-weight: 600;
-  }
-  
-  .card-location {
-    font-size: var(--font-paragrapgh-p1-p1-font-size);
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 24px;
   }
 
+.card-stack {
+  width: 400px;
+}
+  
+  .card-link {
+    margin-top: 8px;
+    display: inline-block;
+    text-decoration: underline;
+    font-size: 12px;
+  }
   

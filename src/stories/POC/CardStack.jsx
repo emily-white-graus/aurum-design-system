@@ -1,40 +1,60 @@
 import React from "react";
-import { Box } from "../primitives/Box";
-import { Stack } from "../primitives/Stack";
 import { Card } from "../components/Card";
-import { Text } from "../primitives/Text";
+import { CardHeading } from "../components/CardHeading";
+import { CardContent } from "../components/CardContent";
+import { Stack } from "../primitives/Stack";
 import { Anchor } from "../components/Anchor";
-import './CardStack.css';
+import "./CardStack.css";
 
-const roles = [
-  { title: "Borrowing Ops", type: "Remote" },
-  { title: "Complaints Advisor", type: "On-site" },
-  { title: "Complaints Team Manager", type: "Remote" },
-  { title: "Front-End Engineer", type: "On-site" },
-  { title: "Senior Product Designer", type: "On-site" },
-  { title: "Technical Product Manager", type: "On-site" },
+const cardData = [
+  {
+    heading: "Borrowing Ops",
+    content: "Remote",
+    link: "#1",
+  },
+  {
+    heading: "Complaints Advisor",
+    content: "On-site",
+    link: "#2",
+  },
+  {
+    heading: "Complaints Team Advisor",
+    content: "Remote",
+    link: "#3",
+  },
+  {
+    heading: "Front-End Engineer",
+    content: "On-site",
+    link: "#4",
+  },
+  {
+    heading: "Senior Product Designer",
+    content: "On-site",
+    link: "#5",
+  },
+  {
+    heading: "Technical Product Manager",
+    content: "On-site",
+    link: "#6",
+  },
 ];
 
 export const CardStack = () => {
   return (
-    <Box className="card-stack">
-      <Stack direction="horizontal" wrap gap="4">
-        {roles.map((role, index) => (
-          <Card key={index} className="card-item">
-            <Stack gap="2">
-              <Text as="span" className="card-title">
-                {role.title}
-              </Text>
-              <Text as="span" className="card-location">
-                {role.type}
-              </Text>
-              <Anchor href="#" className="card-link">
-                More About This Role
-              </Anchor>
-            </Stack>
-          </Card>
-        ))}
-      </Stack>
-    </Box>
+    <Stack direction="column" gap="4">
+      {[0, 1].map((rowIndex) => (
+        <Stack key={rowIndex} direction="row" gap="4">
+          {cardData.slice(rowIndex * 3, rowIndex * 3 + 3).map((card, index) => (
+            <Card key={index} variant="medium" className='card-stack' >
+              <Stack gap="2">
+                <CardHeading variant="medium">{card.heading}</CardHeading>
+                <CardContent variant="medium">{card.content}</CardContent>
+                <Anchor href={card.link}>More About This Role</Anchor>
+              </Stack>
+            </Card>
+          ))}
+        </Stack>
+      ))}
+    </Stack>
   );
 };

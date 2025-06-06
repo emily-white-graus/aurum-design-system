@@ -1,27 +1,20 @@
 import React from "react";
 import { Box } from "../primitives/Box";
 import { Stack } from "../primitives/Stack";
-import { Text } from "../primitives/Text";
 import "./Card.css";
 
 /**
- * Card component with size variants: large, medium, small.
- * @param {string} variant - Card size variant
- * @param {string} heading - Card heading
- * @param {string} content - Card body text
+ * Reusable Card component with size variants and slot-based children.
+ *
+ * @param {string} variant - Card size variant: 'small' | 'medium' | 'large'
+ * @param {React.ReactNode} children - Custom content inside the card
+ * @param {string} className - Optional additional class names
+ * @returns JSX.Element
  */
-
-export const Card = ({ variant = "medium", heading, content }) => {
+export const Card = ({ variant = "medium", children, className = "" }) => {
   return (
-    <Box className={`card card-${variant}`}>
-      <Stack gap="2">
-        <Text as="span" className={`card-heading card-heading-${variant}`}>
-          {heading}
-        </Text>
-        <Text as="span" className={`card-content card-text-${variant}`}>
-          {content}
-        </Text>
-      </Stack>
+    <Box className={`card card-${variant} ${className}`}>
+      <Stack gap="2">{children}</Stack>
     </Box>
   );
 };
