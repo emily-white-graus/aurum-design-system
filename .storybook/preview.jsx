@@ -27,7 +27,20 @@ const preview = {
     docs: {
       theme: aurumTheme,
     },
+    options: {
+      storySort: {
+        order: [
+          'Documentation',
+          'Tokens',
+          'Primitives',
+          'Components',
+          'POC components',
+          'POC',
+        ],
+      },
+    },
   },
 };
 
 export default preview;
+
