@@ -51,7 +51,7 @@ const variantStyles = {
   },
 }
 
-// Pure CSS keyframes for shimmer effect
+// (CSS keyframes for shimmer effect)
 const shimmerKeyframes = `
   @keyframes skeleton-shimmer {
     0% { background-position: -200% 0; }
@@ -59,7 +59,7 @@ const shimmerKeyframes = `
   }
 `
 
-// Inject keyframes only once
+
 if (
   typeof document !== 'undefined' &&
   !document.getElementById('skeleton-shimmer')
