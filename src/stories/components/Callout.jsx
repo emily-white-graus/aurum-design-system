@@ -6,16 +6,54 @@ import { Info, CheckCircle, AlertTriangle, AlertCircle } from 'lucide-react';
 import './callout.css';
 
 /**
- * The Callout component is a non-disruptive content block used to surface supporting information in context. It provides users with helpful, advisory, or cautionary content that enriches the experience without demanding immediate action. Unlike alerts, callouts are used within flows, not interrupting them.
- * 
- * Purpose of callout components :
- * 
- * To offer relevant, visually distinct guidance that enhances clarity or draws attention to useful information in a page or feature.
- * 
- * @param {string} variant - The variant type: 'default', 'success', 'warning', or 'danger'
- * @param {string} children - The content to display in the callout
- * @param {string} className - Additional CSS classes
+ * **Default Callout:**
+ *
+ * **Do:**
+ * - Use for neutral or general information, tips, or contextual help.
+ * - Place inline with forms, settings, or guidance sections.
+ * - Use when no specific status (success/warning/danger) is needed.
+ *
+ * **Don’t:**
+ * - Don’t use for critical alerts or errors.
+ * - Don’t stack multiple default callouts in close proximity.
+ *
+ * ---
+ *
+ * **Success Callout:**
+ *
+ * **Do:**
+ * - Use to confirm positive actions (e.g., successful transactions, form submissions).
+ * - Place near the action area that triggered the success.
+ *
+ * **Don’t:**
+ * - Don’t use for passive updates or neutral information.
+ * - Don’t combine success with warning/danger indicators.
+ *
+ * ---
+ *
+ * **Warning Callout:**
+ *
+ * **Do:**
+ * - Use to inform users of potential risks or upcoming required actions (e.g., expiring cards, missing documents).
+ * - Use when the user still has time or an option to resolve the issue.
+ *
+ * **Don’t:**
+ * - Don’t use for errors that have already occurred—use **Danger** instead.
+ * - Don’t overuse—reserve for content that truly needs caution.
+ *
+ * ---
+ *
+ * **Danger Callout:**
+ *
+ * **Do:**
+ * - Use for critical errors or irreversible actions (e.g., failed payments, account issues).
+ * - Make it prominent and use actionable messaging to guide users.
+ *
+ * **Don’t:**
+ * - Don’t use for low-priority or informational messages.
+ * - Don’t dilute impact by using multiple danger callouts in the same view.
  */
+
 
 export const Callout = ({
   variant = "default",

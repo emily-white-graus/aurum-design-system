@@ -1,4 +1,3 @@
-// Text.jsx
 import React from 'react';
 import './text.css';
 

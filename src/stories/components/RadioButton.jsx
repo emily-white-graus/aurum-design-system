@@ -2,6 +2,25 @@ import React from 'react'
 import './RadioButton.css'
 import { Text } from '../primitives/Text'
 
+/**
+ * **Do:**
+ * 
+ * - Use for exclusive selections (e.g., choosing one shipping method).
+ * - Place radio buttons in a group with a clear label.
+ * - Show clear visual feedback for each state:
+ *   - **On**: filled circle with strong outline
+ *   - **Off**: empty circle
+ *   - **Disabled**: faded styling with no interactivity
+ *   - **Error**: red-styled outline and label
+ * - Ensure keyboard accessibility (arrow key navigation within group).
+ * 
+ * **Don’t:**
+ * 
+ * - Don’t use for multi-select actions — use checkboxes instead.
+ * - Don’t allow more than one item to be selected in the same group.
+ * - Don’t rely on color alone — include labels and state indicators.
+ */
+
 export const RadioButton = ({
   id,
   name,

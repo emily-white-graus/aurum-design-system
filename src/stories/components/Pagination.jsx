@@ -4,6 +4,26 @@ import { Box } from "../primitives/Box";
 import { Text } from "../primitives/Text";
 import { Stack } from "../primitives/Stack";
 
+/**
+ * **Do:**
+ * 
+ * - Use pagination when content is broken into pages (e.g., tables, search results, listings).
+ * - Use the following navigation labels:
+ *   - **First**, **Prev**, **Next**, **Last** for quick access
+ *   - Numeric indicators for direct page selection
+ * - Highlight the current page (e.g., 3) with distinct styling.
+ * - Enable keyboard focus styling for accessibility.
+ * - Use hover effects to indicate interactive pagination items.
+ * - Include disabled states for inactive controls (e.g., "Prev" on first page).
+ * 
+ * **Don’t:**
+ * 
+ * - Don’t use pagination for short lists — prefer infinite scroll or "load more".
+ * - Don’t show pagination controls if there's only one page of content.
+ * - Don’t allow interaction with disabled items.
+ * - Don’t omit feedback (e.g., focused or active styles) — it helps guide users.
+ */
+
 export const Pagination = ({
   totalPages = 5,
   currentPage = 1,

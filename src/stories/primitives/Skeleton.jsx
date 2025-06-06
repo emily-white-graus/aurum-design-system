@@ -1,5 +1,33 @@
 import * as React from 'react'
 
+/**
+ * **Do:**
+ * 
+ * - Use skeletons to indicate loading states for page-level or component-level content.
+ * - Apply the appropriate skeleton type depending on the UI element:
+ *   - **Header Skeleton:** for titles or headings
+ *   - **Text Skeleton:** for body copy or paragraphs
+ *   - **Shape Skeleton:** for avatars, icons, or media (e.g., circular or square)
+ *   - **Button Skeleton:** for actionable elements during loading
+ * - Match the skeleton dimensions to the actual content it will replace.
+ * - Use subtle animation (e.g., shimmer or pulse) to indicate active loading.
+ * - Maintain proper spacing and layout structure — mimic the final content layout.
+ * 
+ * **Don’t:**
+ * 
+ * - Don’t use skeletons for static or cached content.
+ * - Don’t animate too aggressively — keep visual motion subtle and non-distracting.
+ * - Don’t combine skeletons with spinners or loaders in the same component.
+ * - Don’t leave skeletons visible too long — they should be replaced immediately once content is ready.
+ * - Don’t use incorrect shapes (e.g., circular skeletons for rectangular buttons).
+ * 
+ * **When to Use:**
+ * 
+ * - API-driven content where load times exceed 500ms.
+ * - Page transitions or tab switches where significant data is expected.
+ * - Card lists, tables, or sections where users expect multiple data items.
+ */
+
 const variantStyles = {
   shape: {
     width: '100px',
