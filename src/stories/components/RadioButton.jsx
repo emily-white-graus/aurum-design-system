@@ -12,7 +12,6 @@ import { Text } from '../primitives/Text'
  *   - **Off**: empty circle
  *   - **Disabled**: faded styling with no interactivity
  *   - **Error**: red-styled outline and label
- * - Ensure keyboard accessibility (arrow key navigation within group).
  * 
  * **Don’t:**
  * 

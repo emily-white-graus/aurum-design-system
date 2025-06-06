@@ -16,7 +16,6 @@ import './Anchor.css';
  *   - Visited – purple tone to indicate visited state
  *   - Disabled – gray tone, non-interactive
  * - Add an external link icon for URLs that open outside the current product.
- * - Ensure links are accessible: use semantic <a> tags with href.
  * - Use descriptive link text (avoid “click here”).
  * 
  * **Don't:**

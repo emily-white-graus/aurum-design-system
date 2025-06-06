@@ -14,7 +14,6 @@ import './button.css'
  *
  * - Maintain consistent spacing between buttons (8–16px).
  * - Ensure contrast ratios meet accessibility standards (AA/AAA).
- * - Use semantic HTML: < button > with proper roles/states (e.g., disabled, aria-*).
  * - Apply padding and corner radius per size token spec.
  *
  * **Don't:**

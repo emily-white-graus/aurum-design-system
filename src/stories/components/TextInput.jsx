@@ -21,9 +21,7 @@ import { AlertCircle } from 'lucide-react'
  * **Don’t:**
  * 
  * - Don’t leave fields unlabeled — always provide a clear label.
- * - Don’t rely on placeholder text alone for context or instructions.
  * - Don’t mix visual states (e.g., hover + disabled).
- * - Don’t suppress error states — always display feedback when input is invalid.
  * - Don’t use the same styling for disabled and enabled states.
  */
 
